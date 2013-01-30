@@ -1,6 +1,6 @@
 dep 'jenkins.bin' do
   met? {
-    ls '/var/lib/jenkins'
+    '/var/lib/jenkins'.dir?
   }
   installs 'jenkins'
 end
