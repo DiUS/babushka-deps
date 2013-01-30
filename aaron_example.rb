@@ -24,7 +24,7 @@ dep 'headless.bin' do
 end
 
 dep 'actionman-ci' do
-  require 'jenkins.bin'
-  require 'postgres.bin'
-  require 'headless.bin'
+  requires 'jenkins.bin'
+  requires 'postgres.bin'
+  requires 'headless.bin'
 end
