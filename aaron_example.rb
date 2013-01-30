@@ -13,3 +13,18 @@ dep 'postgres.bin' do
     via :apt, ["postgresql", "libpq-dev"]
   }
 end
+
+dep 'headless.bin' do
+  met? {
+    in_path? 'qmake'
+  }
+  installs {
+    via :apt, ["qt4-qmake", "libqt4-dev"]
+  }
+end
+
+dep 'actionman-ci' do
+  require 'jenkins.bin'
+  require 'postgres.bin'
+  require 'headless.bin'
+end
