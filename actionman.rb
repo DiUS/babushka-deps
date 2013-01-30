@@ -14,12 +14,6 @@ dep 'postgres.bin' do
   }
 end
 
-dep 'postgres-create-test-db' do
-  meet {
-    sudo '-u postgres psql -c "CREATE DATABASE actionman_test"'
-  }
-end
-
 dep 'headless.bin' do
   met? {
     in_path? 'qmake'
@@ -32,6 +26,5 @@ end
 dep 'actionman-ci' do
   requires 'jenkins.bin'
   requires 'postgres.bin'
-  requires 'postgres-create-test-db'
   requires 'headless.bin'
 end
