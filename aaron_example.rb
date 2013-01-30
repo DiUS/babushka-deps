@@ -1,4 +1,4 @@
-dep 'llvm in path', :for => :snow_leopard do
+dep 'llvm in path' do
     requires 'xcode tools'
       met? { which 'llvm-gcc-4.2' }
         meet {
