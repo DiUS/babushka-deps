@@ -1,6 +1,6 @@
 dep 'jenkins.bin' do
   met? {
-    '/var/lib/jenkins'.dir?
+    '/var/lib/jenkins'.p.exists?
   }
   installs 'jenkins'
 end
