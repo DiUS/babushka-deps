@@ -1,4 +1,4 @@
-dep 'llvm in path' do
+dep 'aarons_stuff' do
   met? { which 'llvm-gcc-4.2' }
   meet {
     cd('/usr/local/bin') {|path|
