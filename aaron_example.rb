@@ -15,10 +15,9 @@ dep 'postgres.bin' do
 end
 
 dep 'postgres-create-test-db' do
-  met? {
-    sudo '-u postgres psql -l | grep actionman_test'
+  meet {
+    sudo '-u postgres psql -c "CREATE DATABASE actionman_test"'
   }
-  # sudo '-u postgres psql -c "CREATE DATABASE actionman_test"'
 end
 
 dep 'headless.bin' do
